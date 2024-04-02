@@ -17,7 +17,7 @@ export class RegisterService {
     }
 
     getStudentListById(id: number) {
-        return { id };
+        return this.registerRepository.findOne({ where: { id } });
     }
 
     postStudentsList(dataList: RegisterDto) {
